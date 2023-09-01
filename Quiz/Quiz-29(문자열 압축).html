@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>문자영ㄹ 압축</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "";
+            let temp = str[0];
+            let count = 0;
+
+            // inser Code
+            for(let i in str) {
+                if (temp === str[i]) {
+                    count++;
+                } else {
+                    answer += str[i-1];
+                    if (count !== 0) answer += count;
+                    count = 0;
+                    temp = str[i];
+                }
+            }
+            answer += str[str.length-1];
+        
+            return answer;
+        }
+        let str = "KKHSSSSSSSE"
+        console.log(solution(str));
+    </script>
+</body>
+</html>
