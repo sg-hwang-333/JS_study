@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Date 내장함수</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</head>
+<body>
+    <script>
+        var d1 = new Date();    // 시스템에 세팅된 년월일시분초 들고옴 (GMT)
+        console.log(d1);
+
+        // 특정 날짜 및 시간을 직접 지정 : 2023년 12월 25일 13시 30분
+        var d2 = new Date(2023,11,25,13,30);  // 월 : 0 -> 1월
+        console.log(d2);
+        console.log(d2.getMonth());   // Month 월이 0으로 시작함(배열쓸때 편함)
+
+        var d3 = new Date();
+        console.log(d3);
+
+        // 년도만 끌고오기
+        var year = d3.getFullYear();
+        console.log("Year : " + year);
+
+        // 월 끌고오기
+        var month = d3.getMonth() + 1;
+        console.log("Month : " + month);
+
+        // 일 끌고오기
+        var date = d3.getDate();    // getDay() 아님!!
+        console.log("Date : " + date);
+
+        // 요일 끌고오기
+        var day = d3.getDay();
+        console.log("Day : " + day);   // 일요일 (0) 부터 시작
+
+        // 시간 가져오기
+        var hour = d3.getHours();
+        // 분 가져오기
+        var minute = d3.getMinutes();
+        // 초 가져오기
+        var second = d3.getSeconds();
+
+        console.log(hour,  minute, second);  // 사이 공백둬서 출력
+
+
+        // 글로벌 서비스일 경우 접속한 국가의 타임존을 고려해야 함
+        // 한국 : 2023.04.21 14:05
+        // 글제목, 작성, 작성일 : 2023.04.21 14:05
+        // 영국 : 2023.04.21 05:05
+        // 한국 시간대를 자동으로 영국 시간대로 변경해줘야 함
+
+        var d4 = new Date();
+        console.log("timezone" + d4.getTimezoneOffset());   // 출력값(분 단위) -540분 -> -9시간
+
+
+        // 시간 설정
+        var d5 = new Date();
+        d5.setFullYear(2006);
+        d5.setMonth(5);
+        d5.setDate(1);
+        console.log(d5);
+
+        // moments.js 라이브러리
+        var d6 = new Date();
+        console.log(d6);
+        console.log(moment().format("YYYY-MM-DD"));
+        console.log(moment().format("MMM DD, YYYY"));
+
+        // 오늘을 기준으로 일주일 전 출력
+        console.log(moment().subtract(7,"days").format("YYYY-MM-DD"));
+        
+        // 오늘을 기준으로 일주일 후 출력
+        console.log(moment().add(7,"days").format("YYYY-MM-DD"));
+        
+        // 4시간 이후 출력
+        console.log(moment().add(4,"hours").format("HH"));
+
+
+    </script>
+</body>
+</html>

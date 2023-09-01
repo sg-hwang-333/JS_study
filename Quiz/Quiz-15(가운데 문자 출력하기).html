@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>가운데 문자 출력하기</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer="";
+
+
+            // inser Code 
+            if (str.length % 2 == 0) {    // 짝수라면
+                answer = str.substr(str.length/2 -1 ,2);
+            } else {
+                answer = str.substr(str.length/2 ,1);
+            }
+
+            // 방법2. substring 사용
+            // let mid = Math.floor(str.length/2);
+
+            // if (str.length % 2 == 1) {
+            //     answer = str.substring(mid, mid+1);
+            // } else {
+            //     answer = str.substring(mid-1, mid+1);
+            // }
+        
+            return answer;
+        }
+        
+        let str1 = "study";
+        let str2 = "good";
+        let str3 = "teacher";
+        let str4 = "length";
+
+        console.log(solution(str1));
+        console.log(solution(str2));
+        console.log(solution(str3));
+        console.log(solution(str4));
+    </script>
+</body>
+</html>

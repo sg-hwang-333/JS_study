@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+
+        // function hello1() {
+        //     console.log("Hello World!");
+        //     return "Welcome";
+        // }
+        // console.log(hello1());
+    
+        // var hello2 = function() {
+        //     console.log("Hello World!");
+        //     return "Welcome";
+        // };
+        // hello2();
+
+        // Arrow Function 
+        var hello3 = () => {
+            console.log("Hello World!");
+            return "Welcome";
+        };
+        hello3();
+
+
+        var hello4 = () => "Welcome";
+        console.log(hello4());
+
+
+        function hello5(fullName) {
+            return "Welcome" + " " + fullName;
+        }
+        console.log(hello5("홍길동"));
+        
+
+        var hello6 = (fullName) => "Welcome" + " " + fullName;
+        console.log(hello6("황슬기"));
+
+        // 매개변수가 하나일 경우에는 () 생략 가능
+        var hello7 = fullName => "Welcome" + " " + fullName;
+        console.log(hello7("황슬기"));
+
+
+    </script>
+</body>
+</html>

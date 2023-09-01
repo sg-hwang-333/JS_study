@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // Scope : 변수에 대한 접근성을 의미
+
+        function myFunction() {
+            // local Scope : 지역변수
+            var carName1 = "현대자동차";
+            console.log(carName1);
+        }
+        myFunction();
+        
+
+        // global Scope : 전역변수
+        var carName2 = "기아자동차";
+
+        myFunction2();        // 정상적으로 실행됨 (JS에서 함수는 먼저 컴파일을 실행함)
+        function myFunction2() {
+            console.log(carName2);
+        }
+        
+
+        // myFunction3();       :실행안됨 (함수는 컴파일을 미리 해주지만, 이건 변수라서 미리 컴파일 안함)
+        var myFunction3 = function() {
+            console.log("myFunction3 호출");
+        }
+        myFunction3();
+
+        // myFunction3 = function() {
+        //     console.log("myFunction3 호출");
+        // }
+
+       
+
+    </script>
+</body>
+</html>

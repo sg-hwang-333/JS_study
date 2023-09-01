@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        // function sum1(x1, x2) {
+        //     var y1 = x1+x2;
+        //     console.log(y1);
+        //     return y1;
+        // }
+        // sum1(5,7);
+
+        // function sum2(x1, x2, x3) {
+        //     var y1 = x1+x2+x3;
+        //     console.log(y1);
+        //     return y1;
+        // }
+        // sum2(5,7,9);
+
+        // function sum3(x1, x2, x3, x4) {
+        //     var y1 = x1+x2+x3+x4;
+        //     console.log(y1);
+        //     return y1;
+        // }
+        // sum3(5,7,9,11);
+
+        // rest parameter
+        function sum (...args) {   // 매개변수를 배열로 받음
+            let total = 0;
+            
+            // total = args.reduce(function(a,c){
+            //     return a + c;
+            // });
+
+            args.forEach(function(x) {
+                total += x;
+            })
+            
+
+            console.log(total);
+        }
+        sum(1,2,3,4,5);
+    </script>
+</body>
+</html>

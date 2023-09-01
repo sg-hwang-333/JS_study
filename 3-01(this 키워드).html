@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>this 키워드</title>
+</head>
+<body>
+
+    <button onclick="this.style.backgroundColor='red'">Click1</button>
+    <button onclick="callFunc(this)">Click2</button>
+
+    <select onchange="changeSelect(this)">
+        <option value="1">1입니다</option>
+        <option value="2">2입니다</option>
+        <option value="3">3입니다</option>
+    </select>
+
+    <script>
+        console.log(this); // Window 객체들
+        alert("슬기 배고파");
+
+        function myFunction() {
+            console.log("myFunction() 호출");
+            console.log(this);  // Window 객체들 (not myFunction 객체)
+        }
+
+        myFunction();
+
+
+        var person = {
+            firstName: "슬기",
+            lastName : "황",
+            fullName : function() {
+                return person.firstName + " " + person.lastName;
+            }
+        }
+        
+        console.log(person.fullName());
+
+        function callFunc(obj1) {
+            // alert("callFunc() 함수 호출");
+            console.log(obj1);  // <button onclick="callFunc(this)">Click2</button>
+        }
+
+        function changeSelect(obj2) {
+            // alert("changeSelect() 함수 호출");
+            console.log(obj2);  // 해당 엘리멘트 객체 출력 (위의 console.log(obj1) 와 동일함)
+            console.log(obj2.value); // value값 출력
+        }
+
+    </script>
+</body>
+</html>

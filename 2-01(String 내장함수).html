@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>String 내장함수</title>
+</head>
+<body>
+    <script>
+        // length : 문자열의 길이를 리턴
+        var txt = "QWERTYUIOPASDFGHJKLZXCVBNMM"
+        console.log(txt.length);
+
+        // indexOf : 특정한 문자열의 위치값을 리턴 (문자열이 없을 경우 -1 리턴)
+        var str = "Please locate 'where locate'";
+        console.log(str.indexOf("locate"));
+        // address.indexOf("@");  : 이메일 주소가 유효한지 확인하는데 사용
+        
+        if (str.indexOf("locate") > -1) {
+            console.log("locate 문자 발견");
+        } else {
+            console.log("문자가 없습니다");
+        }
+
+        // lastIndexOf : 마지막으로 나온 특정한 문자열의 위치값을 리턴
+        console.log(str.lastIndexOf("locate"));
+
+        // search : indexOf랑 비슷
+        console.log(str.search("locate"));
+
+        // slice : (str.slice(시작인덱스, 종료인덱스+1))
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.slice(7, 13));   // 출력값 : banana
+        console.log(str.slice(7));       // 출력값 : banana, kiwi
+        console.log(str.slice(-12,-6))   // 출력값 : banana, -붙이면 맨끝 문자열에서부터 -1부터 시작
+
+        // substring
+        console.log(str.substring(7,13));   // 출력값 : banana
+
+        // substr : str.substr(시작인덱스, 글자 수)
+        console.log(str.substr(7,6));       // 출력값 : banana
+
+        var hwang1 = "060601";
+        console.log(hwang1.substr(0,2));
+        console.log(hwang1.substr(2,2));
+        console.log(hwang1.substr(4,2));
+
+        
+        var hwang2 = "2006-06-01";    // "06-06-01", "2006-6-1"
+        console.log(hwang2.substring(0,hwang2.indexOf("-")));
+
+        // replace
+        var str1 = "please visit here";
+        var str2 = str1.replace("here","there");
+
+        console.log(str2);
+
+        var str3 = "please visit here here here";
+        var str4 = str3.replace("here","there");       // 제일 첫번째로 탐색되는 here 하나만 바꿈
+        // 모든 here을 바꾸고 싶을 땐 str3.replaceAll() 사용
+
+        console.log(str4);
+
+        // 정규표현식 이용
+        var str5 = "please visit here here here";
+        var str6 = str5.replace(/here/g,"there");     // g = global 의미
+
+        console.log(str6);
+
+        var str7 = "please visit here HERE hERe";     // 문자열의 대소문자를 구분함
+        var str8 = str7.replace(/here/gi, "there");   // i = ignore 의미 (대소문자 무시)
+
+        console.log(str8);
+
+        // 대문자/소문자로 변환
+        var str9 = "please visit here Here hEre";
+        console.log(str9.toUpperCase());
+        console.log(str9.toLowerCase());
+        
+        // 데이터베이스 : john. John, JOHN
+
+        // 문자열 합치기
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txt3 = txt1 + " " +txt2;
+        console.log(txt3);
+
+        console.log(txt1.concat(" " + txt2));
+        console.log(txt1.concat(" " + "Choi" + " " + txt1 + " " + txt2));
+
+        // 앞뒤 공백 제거
+        var str10 = "                    Hello                                 World             ";
+        console.log(str10);
+        console.log(str10.trim());
+
+        // padStart(자릿수, 앞쪽 빈공간에 찍을 것);  : 생년월일 등에 많이 쓰임
+        var str11 = "5";
+        console.log(str11.padStart(4,0));
+
+        var str12 = "3";
+        var str13 = "13";
+        console.log(str12.padStart(2,0));
+        console.log(str13.padStart(2,0));
+        
+        // padEnd(자릿수, 뒤쪽 빈공간에 적을 것); 
+        console.log(str13.padEnd(4,0));
+
+        // chatAt(index) : 성별판별할때 많이 쓰임 (주민등록 등)
+        var str14 = "060601-4721633";
+        console.log(str14.charAt(7));
+        
+        // split(배열 방에 쪼갤 기준)  : 날짜(ex. 2006-06-01) 등을 년,월,일로 나눌 때 많이 쓰임
+        var tags = "키보드, 기계식, 블루투스"
+        var arr1 = tags.split(", ");
+        console.log(arr1);
+
+        var birthday = "2006-06-01";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+
+        
+
+    </script>
+</body>
+</html>

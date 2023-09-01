@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = [];
+
+            // inser Code
+            // for(let i = 0; i < str.length; i++ ){
+    	    //     if (str.indexOf(str[i]) === i) {
+            //        answer.push(str[i]);
+            //     }
+            // }
+
+            // answer.push(str.filter(function (i, index) {
+            //     return str.indexOf(i) === index;
+            // }));
+
+            // i : 배열에서 값 하나씩 들고옴 , index : 인덱스값
+            answer.push(str.filter((x, index) => str.indexOf(x) === index));
+        
+            return answer;
+        }
+        
+        let arr = ["good", "time", "good", "time", "student"];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>

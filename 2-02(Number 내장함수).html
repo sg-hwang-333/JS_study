@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Number 내장함수</title>
+</head>
+<body>
+    <script>
+        // toString()   : 변수를 문자열로 바꿈
+        var x1 = 123;
+        console.log(x1 + 1);
+        console.log(x1.toString() + 1);   // "123" + 1
+        
+        // toFixed() : 지정된 소수점 자리수까지 반올림으로 표기
+        var x2 = 12.562243;
+        console.log(x2.toFixed(2));   // 출력값 : 12.56
+
+
+        // toPrecision()  : 정수까지 포함하여 무조건 두자리 (반올림함)
+        var x3 = 9.559;
+        console.log(x3.toPrecision(2));  // 출력값 : 9.6
+
+        // Number(Object)   : 오브젝트를 숫자로 변환
+        var x4 = Number("10");
+        console.log(x4);
+        console.log(typeof x4);
+
+        var x5 = Number(false);   // true : 1, false : 0
+        console.log(x5);
+
+        // 공백 있으면 알아서 공백제거해줌
+        console.log(Number("            10           "));
+        console.log(Number("10                  "));
+        console.log(Number("10.33"));
+        // 밑에 있는 애들은 전부 NaN으로 나옴
+        console.log(Number("10,33"));
+        console.log(Number("Choi"));
+        console.log(Number("10 33"));
+
+
+        // parseInt()    : 정수로 변환
+        console.log(parseInt("3"));
+        console.log(parseInt("3.3"));
+        // Number 타입에선 공백있으면 NaN으로 하지만, parseInt는 가장 앞의것만 바꿔줌 (가장 앞의 것이 문자라면 NaN)
+        console.log(parseInt("10 20 30"));
+        console.log(parseInt("23 years old"));
+        
+
+        // parseFloat()   : 실수로 변환
+        console.log(typeof parseFloat("10"));
+
+        // ceil() : 무조건 올림
+        console.log(Math.ceil(2.1));   // 출력값 : 3
+        // floor() : 무조건 내림
+        console.log(Math.floor(2.6));  // 출력값 : 2
+
+        // round() : 반올림
+        console.log(Math.round(2.5));  // 출력값 : 3
+        console.log(Math.round(2.1));  // 출력값 : 2
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>격자판 최대합</title>
+</head>
+
+<body>
+    <script>
+        function solution(arr) {
+            let answer = Number.MIN_SAFE_INTEGER;
+            let rowSum = columnSum = diagSum1 = diagSum2 = 0;
+
+            for (let i in arr) {
+                for (let j in arr) {
+                    rowSum += arr[i][j];
+                    columnSum += arr[j][i];
+
+                    if (answer < rowSum) answer = rowSum;
+                    if (answer < columnSum) answer = columnSum;
+                }
+                
+                rowSum = 0;
+                columnSum = 0;
+                diagSum1 += arr[i][i];
+                diagSum2 += arr[i][arr.length - i - 1];
+            }
+            if (answer < diagSum1) answer = diagSum1;
+            if (answer < diagSum2) answer = diagSum2;
+
+            return answer;
+        } 
+
+        let arr = [[10, 13, 10, 12, 15],
+        [12, 39, 30, 23, 11],
+        [11, 25, 50, 53, 15],
+        [19, 27, 29, 37, 27],
+        [19, 13, 30, 13, 19]]
+
+        console.log(solution(arr));
+    </script>
+</body>
+
+</html>

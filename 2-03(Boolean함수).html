@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Boolean 함수</title>
+</head>
+<body>
+    <script>
+        var x1 = true;
+        var y1 = new Boolean(true);
+
+        console.log(x1);        // 그냥 true
+        console.log(y1);        // 객체이기 때문에 Boolean {true}로 나옴
+
+        console.log(typeof x1);    // Boolean
+        console.log(typeof y1);    // Object
+
+        console.log(x1 == y1);     // true   (둘이 같은 값을 가지고 있기 때문)
+        console.log(x1 === y1);    // false  (Type까지 비교)
+
+
+        var x2 = "abc";
+        var y2 = new String("abc"); 
+
+        console.log(x2);       // abc
+        console.log(y2);       // String {'abc'}
+
+        console.log(x2 == y2);      // true
+        console.log(x2 === y2);     // false
+
+        var x = 0; 
+        console.log(x);                  // 0
+        console.log(Boolean(x));         // false (0은 false, 1은 true)
+
+        var x0;
+        console.log(x0);            // undefined
+        console.log(Boolean(x0));   // false (숫자(0 제외)가 아닌 것들은 false로 처리해버림)
+        console.log(Boolean(3));
+
+
+    </script>
+</body>
+</html>

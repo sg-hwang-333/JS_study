@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer="Yes";
+            str = str.toLowerCase();
+            let str2 = "";
+
+            // // inser Code
+            // for (let i of str) {
+            //     if (i.charCodeAt() >= 97 && i.charCodeAt() <= 122 ) {
+            //         str2 += i;
+            //     }
+            // }
+            // let len = str2.length;
+            // for (let i = 0; i < Math.floor(len/2); i++) {
+            //     if(str2[i] !== str2[len-i-1]) {
+            //         return answer = "No";
+            //     }
+            // }
+
+
+            // 정규표현식 사용
+            str = str.toLowerCase().replace(/[^a-z]/g, '');
+            let len = str.length;
+            for (let i = 0; i < Math.floor(len/2); i++) {
+                if(str[i] !== str[len-i-1]) {
+                    return answer = "No";
+                }
+            }
+        
+            return answer;
+        }
+        let str = "found777,Time^study,Yduts;emit,9Dnuof"
+        console.log(solution(str));
+    </script>
+</body>
+</html>

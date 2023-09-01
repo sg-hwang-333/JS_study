@@ -1,0 +1,146 @@
+<html>
+<head>
+    <title>데이터타입 (String, Number, Object, Array, Undefined, Null)</title>
+</head>
+<body>
+    <script>
+        // String
+        let name1 = "홍길동";
+        let name2 = "홍길순";
+        // let str1 = "저의 이름은 "홍길동" 입니다.";   에러 발생
+        let str1 = "저의 이름은 '홍길동' 입니다."; 
+        
+        console.log(str1);
+
+
+        let str2 = "저의 이름은 \"홍길동\" 입니다."
+        let str3 = "저의 이름은 \'홍길동\'' 입니다."
+        console.log(str2);
+        console.log(str3);
+
+        let str4 = "저의 이름은 \홍길동\입니다.";   //정상적으로 실행되나, 출력값은 없다.
+        console.log(str4);
+
+        let str5 = "저의 이름은 \\홍길동\\입니다.";
+        console.log(str5);
+
+        
+        // Number 
+        let x = 3;
+        let y = 3.14;
+
+
+        // Undefined
+        let u1;
+        console.log(u1);            // 선언만 했고 초기화를 안 하면 undefined가 나옴
+        let u2 = undefined;         // 변수 초기화를 undefined로 쓸 수도 있음 (추천X)
+        console.log(u2);
+
+
+        // Null
+        let n1 = null;
+        console.log(n1 + 1);        // 다른 언어에선 null끼리 연산안되는데 JS에선 됨, 출력값 1
+
+
+        Object        // JS는 오브젝트 언어가 아닌 스크립트 언어이지만 Object를 지원해줌
+        let person1 = {};    // Object 선언
+        person1.firstName = "길동";    // .firstName : 멤버변수 (C에선 구조체)
+        person1.lastName = "홍";        
+        person1.age = 23;
+
+        // Object 선언과 동시에 멤버변수 초기화
+        let person2 = {
+            firstName:"길순",
+            lastName:"홍",
+            age: 10,
+        };
+    
+        let person3 = {};
+        person3["firstName"] = "길동";
+        person3["lastName"] = "홍";
+        person3["age"] = 20;
+
+        person2.email = "Hwang@gmail.com";
+
+        console.log(person1.firstName);
+        console.log(person1.lastName);
+        console.log(person1.age);
+
+
+        document.write(person1.firstName + "<br>");
+        document.write(person1.lastName + "<br>");
+        document.write(person1.age + "<br>");
+
+
+        console.log(person2.firstName);
+        console.log(person2.lastName);
+        console.log(person2.age);
+        console.log(person2.email);
+
+ 
+        // Array  (배열)
+        let car =  ["현대", "기아" , "롤보" , "테슬라", "벤츠"];
+
+        console.log(car[0]);
+        console.log(car[1]);
+        console.log(car[2]);
+        console.log(car[3]);
+        console.log(car[4]);
+
+        let num = [3, 7, 2, 9, 12];
+        console.log(num[2]);
+        console.log(num[5]);       // undefined
+
+        let arr1 = [3, undefined, null, "문자열", 5.12];
+
+        for (var i of arr1) {
+            console.log(i);
+        }
+
+        let arr2 = [person1, person2, person3];
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
+
+        let arr3 = [];
+        arr3[0] = 0;
+        arr3[0] = 1;
+        arr3[1] = "대한민국";
+        arr3[6] = 1;
+        for (var i = 0; i < arr3.length; i++ ) {
+            console.log(arr3[i]);
+        }
+
+
+        // 배열의 push 메서드를 이용해서 순차적으로 삽입
+        let arr4 = [];
+        arr4.push(2022);
+        arr4.push("황슬기");
+        arr4.push(undefined);
+        arr4.push(null);
+        arr4.push(3.14);
+
+        for (var i = 0; i < arr4.length; i++ ) {
+            console.log(arr4[i]);
+            document.write(arr4[i] + "<br>");
+        } // for
+
+
+        // Boolean 참/거짓 : true or false
+        let isAdult = false;    // isAdult = true 도 가능
+        let num1 = 5;
+        let num2 = 7;
+
+        console.log(num1 > num2);
+
+
+        // typeof : let, var 등이 아닌 원래의 데이터타입을 알려주는 메서드
+        console.log(typeof num);    
+        console.log(typeof isAdult);
+        console.log(typeof name1);
+        console.log(typeof person1);
+        console.log(typeof arr1);
+
+    </script>
+</body>
+</html> 

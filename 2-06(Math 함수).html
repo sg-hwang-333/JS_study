@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Math 내장함수</title>
+</head>
+<body>
+    <script>
+    // Math : 수학과 관련된 함수
+
+    // round : 반올림
+    console.log(Math.round(4.9));   // 5
+    console.log(Math.round(4.4));   // 4
+
+    // ceil() : 무조건 올림 
+    console.log(Math.ceil(4.9));   // 5
+    console.log(Math.ceil(4.4));   // 5
+    console.log(Math.ceil(4.0));   // 4
+    
+    // 게시판에 글이 72건 
+    // 1페이지에 보여주는 글의 개수는 10개로 설정
+    // [1][2][3][4][5][6][7][8]   
+    console.log(Math.ceil(72/10));
+    
+
+    // floor() : 무조건 내림
+    console.log(Math.floor(4.9));   // 4
+    console.log(Math.floor(4.1));   // 4
+
+    // trunc() : 정수만 리턴
+    console.log(Math.trunc(4.9));   // 4
+    console.log(Math.trunc(4.1));   // 4
+    
+    // 음수일 때 큰 차이가 남
+    console.log(Math.ceil(-4.1));  // -4
+    console.log(Math.floor(-4.1));  // -5
+    console.log(Math.trunc(-4.1));  // -4
+
+    // sign : 음수: -1 리턴 , 양수: 1 리턴, 0: 0 리턴
+    console.log(Math.sign(-4));   // -1
+    console.log(Math.sign(0));    // 0
+    console.log(Math.sign(4));    // 1
+
+    // pow() : 제곱
+    console.log(Math.pow(8,2));   // 8의 2승 (64)
+
+    // sqrt() : 제곱근
+    console.log(Math.sqrt(64));   // 루트 64 (8)
+
+    // abs() : 절대값
+    console.log(Math.abs(4.7));
+    console.log(Math.abs(-4.7));
+
+    // max(), min()
+    console.log(Math.max(0,150,32,-76,200,43));  // 200
+    console.log(Math.min(0,150,32,-76,200,43));  // -76
+
+    // random()
+    var x1 = Math.random();           // 0~1 사이의 실수, 1은 안나옴
+    console.log(x1);
+
+    // 1에서 6 사이의 임의의 정수
+    var x2 = Math.trunc(Math.random() * 6 + 1);
+    var x3 = Math.trunc(Math.random() * 6 + 1);
+    console.log("(" + x2 + "," + x3 + ")");
+
+    // 20~40 사이의 임의의 정수를 생성
+    function getRanInteger(min, max) {
+        return Math.trunc(Math.random() * (max-min+1)) + min;   // 공식같은거 
+    }
+
+    console.log(getRanInteger(20,40));
+
+    </script>
+</body>
+</html>

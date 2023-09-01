@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            // let answer;
+
+            // // inser Code
+            // for(let i of str) {
+            //     for (let j = str.length-1; j >= 0; j--) {
+            //         if (i.toUpperCase() !== str[j].toUpperCase()) {
+            //             answer = "No";
+            //         } else {
+            //             answer = "YES";
+            //         }
+            //     }
+            // }
+
+            
+            let answer = "YES";
+            str = str.toLowerCase();
+
+            // // 방법1: index를 이용한 직접 비교방법
+            // let len = str.length;
+            // for (let i = 0; i < Math.floor(len/2); i++) {
+            //     if(str[i] !== str[len-i-1]) {
+            //         return answer = "No";
+            //     }
+            // }
+
+            // 방법2: reverse() 함수 이용
+            if (str !== str.split('').reverse().join('')) {
+                return answer="No";
+            }
+        
+            return answer;
+        }
+        
+        console.log(solution("gooG"));
+        console.log(solution("Student"));
+    </script>
+</body>
+</html>

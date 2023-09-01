@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>대문자로 통일</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "";
+
+            // inser Code
+            // 방법1 : toLowerCase(), toUpperCase() 등을 사용
+            for (let x of str) {
+                
+                if (x !== x.toUpperCase()) {
+                    answer += x.toUpperCase();
+                } else {
+                    answer += x;
+                }
+            }
+
+            // 방법2 : 아스키 코드를 이용하는 방법
+            // for (let x of str) {
+            //     let num = x.charCodeAt();
+            //     if (num >= 97 && num <= 122 ) {
+            //         answer += String.fromCharCode(num-32);
+            //     } else {
+            //         answer += x;
+            //     }
+            // }
+            return answer;
+        }
+        
+        let str = "ItisTimeToStudy";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

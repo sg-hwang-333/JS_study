@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>문자 찾기</title>
+</head>
+<body>
+    <script>
+        function solution(str1, str2) {
+            let answer = 0;
+
+            // 방법 1 : for문을 사용
+            // for (let x of str1) {
+            //     if (x == str2) {
+            //         answer ++;
+            //     }
+            // }
+        
+            // 방법 2 : 내장함수를 사용
+            answer = str1.split(str2).length -1;
+            
+
+
+            return answer;
+        }
+        let str1 = "COMPUTERPROGRAMMING";
+        console.log(solution(str1, "R"));
+    </script>
+</body>
+</html>

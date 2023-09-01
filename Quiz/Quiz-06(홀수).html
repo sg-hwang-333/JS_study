@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Quiz-06(홀수)</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = [];
+            let sum = 0, min = Number.MAX_SAFE_INTEGER;
+
+            for (let i of arr) {
+                if (i % 2 !== 0) {
+                    sum += i;
+                    if (i <= min) {
+                        min = i;
+                    }
+                }
+            }
+
+            answer.push(sum, min);
+
+            return answer;
+        }
+        // 77, 41, 53, 85
+        var arr = [12,38,77,41,53,85,66]
+        console.log(solution(arr));
+    </script>
+</body>
+</html>

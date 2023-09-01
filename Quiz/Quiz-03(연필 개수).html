@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Quiz-03 연필개수</title>
+</head>
+<body>
+    <script>
+        function solution(n) {
+            let answer;
+
+            for (var i = 0; i < 1000; i++) {
+                if (i*12 >= n) {
+                    answer = i;
+                    break;
+                }
+            }
+
+            return answer;
+        }
+
+        var n = prompt("N을 입력하시오");
+        console.log(solution(n));
+    </script>
+</body>
+</html>

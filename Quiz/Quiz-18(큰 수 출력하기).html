@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = [str[0]];
+
+            // inser Code
+            for (let i = 1; i < str.length; i++ ) {
+                if (str[i] >= str[i-1]) answer.push(str[i]);
+            }
+        
+            return answer;
+        }
+        // let num = 6;
+        let arr = [7, 3, 9, 5, 6, 12]
+        console.log(solution(arr));
+    </script>
+</body>
+</html>

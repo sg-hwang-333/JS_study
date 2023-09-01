@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Windows 객체</title>
+</head>
+<body>
+    <script>
+        // console.log(window);
+        // // window 내장 객체가 제공해주는 메서드
+        // alert("이것은 대화창 입니다");   // window.alert(); 
+
+        // var yn = confirm("정말로 삭제하시겠습니까?");   
+        // console.log(yn);
+
+        // if (yn) {
+        //     // DB 삭제하는 코드 삽입
+        //     console.log("삭제됨");
+        // } 
+
+        // if (confirm("배고프십니까?")) {
+        //     console.log("밥을 드세요");
+        // }
+
+        // var txt = prompt("비밀번호를 입력하세요 : ");
+        // console.log(txt);
+
+        // if (txt===null) console.log("취소 선택");
+        // else if (txt==="") console.log("비밀번호를 입력하십시오");
+        // else if (txt!=="") console.log(txt);
+
+
+        // window.open("https://www.naver.com");   // open();
+        // window.print();    // 현재 내용
+
+        // // setTimeout();
+        // setTimeout(function() {
+        //     console.log("메르스프덱 짜고 싶다");
+        // }, 3000);
+
+        // var i = 0;
+
+        // // setInterval
+        // setInterval(function() {
+        //     console.log("유희왕 보자 진영아" + i);
+        //     i++;
+        // }, 3000);
+
+
+        var i = 0;
+
+        var fac = setInterval(function() {
+            console.log("유희왕 보자 진영아" + i);
+            if (i==3) clearInterval(fac);
+            i++;
+        }, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            // let answer="";
+
+            // inser Code
+            for(let i = 0; i < str.length; i++ ){
+    	        if (str.indexOf(str[i]) === i) {
+                    answer += str[i];
+                }
+            }
+
+
+            // // 특정 문자 갯수 출력 (k)
+            // let answer = 0;
+            // let pos = str.indexOf('k');
+            // while( pos !== -1 ) {
+            //     answer++;
+            //     pos = str.indexOf('k', pos+1);
+            // }
+        
+            return answer;
+        }
+        
+        let str1 = "ksekkset";
+        let str2 = "good";
+        console.log(solution(str1));
+    </script>
+</body>
+</html>

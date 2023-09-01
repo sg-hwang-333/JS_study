@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Default Function Parameter</title>
+</head>
+<body>
+    <script>
+        // ES6 : Ecma Script 6 : 표준 스크립트
+
+        
+        // Default Function Parameter : 기본 함수 매개변수
+        function say1(message="매개변수가 없습니다") {
+            // 옛날방식
+            // if (message === undefined) console.log("매개변수를 입력해주세요");
+            // else console.log(message);
+
+            console.log(message);
+
+        }
+        say1("안녕하세요");
+        say1("반갑습니다");
+        say1();    // undefined
+
+        function plus1(a = 0,b = 0) {
+            console.log(a + b);
+        }
+
+        plus1(2,3);
+        plus1(2);
+        plus1();
+    </script>
+</body>
+</html>

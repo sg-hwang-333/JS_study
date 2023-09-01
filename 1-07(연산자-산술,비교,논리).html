@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>연산자 - 산술, 논리, 비교</title>
+</head>
+<body>
+    <script>
+        // 산술연산자
+
+        // 더하기
+        var x1 = 5;
+        var y1 = 2;
+        var z1 = x1 + y1;
+        console.log(z1);
+        
+        // 빼기
+        var x1 = 5;
+        var y1 = 2;
+        var z1 = x1 - y1;
+        console.log(z1);
+        
+        // 곱하기
+        var x1 = 5;
+        var y1 = 2;
+        var z1 = x1 * y1;
+        console.log(z1);
+        
+        // 나누기
+        var x1 = 5;
+        var y1 = 2;
+        var z1 = x1 / y1;
+        console.log(z1);
+
+        
+        // 거듭제곱
+        var x5 = 5;
+        var y5 = 2;
+        var z5 = x5 ** y5
+        console.log(z5);
+
+        // 나머지
+        var x6 = 5;
+        var y6 = 2;
+        var z6 = x6 % y6;
+        console.log(z6)
+
+        // 증가연산자
+        var x7 = 1;
+        x7++;
+        console.log(x7);
+
+        // 감소연산자
+        var x7 = 4;
+        x7--;
+        console.log(x7); 
+        
+        // +=, -=, *=, /=
+        var x = 5;
+        var y = 2;
+
+        x += y;
+        console.log(x);
+
+        x -= y;
+        console.log(x);
+
+        x *= y;
+        console.log(x);
+
+        x /= y;
+        console.log(x);
+
+        // 문자열 연산자
+        var text1 = "메르피";
+        var text2 = "퍼피"
+        var text3 = text1 + text2;
+        console.log(text3);
+
+        text1 += text2;
+        console.log(text1);
+
+        console.log(text1.concat(text2));
+
+        var x = 5 + 5;
+        console.log(x);
+        var y = "5" + 5;
+        console.log(y);
+
+        // 비교연산자
+        console.log(1 == 1);
+        console.log("1" == 1);  // 실제 값을 비교 (true)
+        console.log("1" === 1);  // 실제 값과 type을 비교 (false)
+
+        console.log(1 != 2);
+        console.log(1 != "1");  // false
+        console.log(1 !== "1"); // true
+
+        console.log(3 > 2);
+        console.log(3 < 2);
+        console.log(3 >= 2);
+        console.log(3 <= 2);
+
+        // 논리 연산자
+        console.log(3 > 2 && 1 > 2);
+        console.log(3 > 2 || 1 > 2);
+        console.log(!(3 > 2));
+        console.log(!(3 < 2));
+        
+
+    </script>
+</body>
+</html>
