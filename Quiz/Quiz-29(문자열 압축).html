@@ -1,13 +1,13 @@
 <html>
 <head>
-    <title>문자영ㄹ 압축</title>
+    <title>문자열 압축</title>
 </head>
 <body>
     <script>
         function solution(str) {
             let answer = "";
             let temp = str[0];
-            let count = 0;
+            let count = -1;
 
             // inser Code
             for(let i in str) {
@@ -15,7 +15,7 @@
                     count++;
                 } else {
                     answer += str[i-1];
-                    if (count !== 0) answer += count;
+                    if (i !== 0 && count !== 0) answer += count+1;
                     count = 0;
                     temp = str[i];
                 }
