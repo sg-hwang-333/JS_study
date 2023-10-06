@@ -71,6 +71,29 @@
         var patt9 = /10?/g;      // 1, 10, 10
         console.log(str11.match(patt9));
 
+        // 우편번호
+        var patt10 = /\d{5}/;
+        var postableCode = "12345";
+        var postalCode = "p12345";
+        console.log(patt10.test(postableCode));   // postableCode가 patt10자리인지 (조건에 만족하는지)  / true
+        
+        // ^ : ^이후에 나오는 문자로 시작해야 한다
+        var patt11 = /^\d{5}%$/;    // /^\d{5}/  : 6을 초과하면 안됨
+        var postableCode = "P123456";
+        console.log(patt11.test(postableCode));    // false (시작숫자가 P여서)
+        
+
+        // 핸드폰번호 : 010-9161-0601
+        var patt12 = /^(010)-\d{4}-\d{4}$/;
+        var phoneNumber = "010-9161-0601";
+        console.log(patt12.test(phoneNumber));
+
+
+        // 이메일주소 : hsg151515@gmail.com
+        //                      @gmail.co.kr
+        //                      @gmail.net
+        var patt13 = /^\w+([\.-]?\w)*@\w+(\.\w{2,3})+$/;
+        console.log(patt13.test("hsg151515@gmail.com"))
     </script>
     
 </body>
