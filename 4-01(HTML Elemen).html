@@ -26,8 +26,12 @@
     </select>
 
     <br>
+
+    <div id="div1"><h1>[div] 태그를 사용합니다</h1></div>
+
     <Button onclick="doSave();">저장</Button>
     <script>
+        document.getElementById("text1").value = "황슬기";
         function doSave() {
             // alert("추억이 떠오르니?");
             // console.log("저장 버튼 클릭");
@@ -62,6 +66,9 @@
             var select = document.getElementById("select1");
             console.log(select);
 
+            var div_txt = document.getElementById("div1").innerHTML;
+            console.log(div_txt);
+            
 
         }// dosave()
     </script>
